@@ -3,3 +3,61 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body {
+    font-family: 'arial' ;
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    align-items: center;
+    background-color: #707070;
+    background-image: -webkit-linear-gradient(83.8deg, #fff 29.5%, #707070 30%);
+    opacity: 1; 
+    letter-spacing: 0px;
+}
+
+.title {
+    color: #ffffff;
+    margin-top: 50px;
+    font-size: 24px;
+    font-weight: 400;   
+}
+
+.title2 {
+    color: #ffffff;
+    font-size: 52px;
+    font-weight: 700;
+}
+
+.subtitle {
+    color: #ffffff;
+    font-size: 20px;
+    margin-top: 40px;
+    font-weight: 400;
+}s
+
+.nav {
+    display: flex;
+    margin-top: 60px ;
+    opacity: 1;
+    gap: 30px;   
+}
+
+.navBar {
+    background-color: #ffffff;
+    list-style: none;
+    border-radius: 4px;
+    padding: 10px 35px;
+    color: #888888;
+    box-shadow: 0px 1px 6px #00000029 ;
+}
+
+
+
+
+
+
+
