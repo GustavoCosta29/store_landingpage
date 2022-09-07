@@ -166,6 +166,7 @@ body {
     flex-direction: row;
     flex-wrap: wrap;    
     gap: 35px;
+    justify-content: center;
 }
 
 .productBox {
@@ -216,6 +217,19 @@ body {
 .productBox button:hover {  
     background-color: #afffa8;
     transition-duration: 1s;
+}
+
+.more_Products {
+    margin: 60px auto
+}
+
+.buttonMoreProducts {
+    background-color: #ffffff;
+    border: 1px solid #707070;
+    padding: 15px 80px;
+    border-radius: 4px;
+    font-size: 16px; 
+    
 }
 
 
