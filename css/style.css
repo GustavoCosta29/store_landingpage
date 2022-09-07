@@ -134,11 +134,11 @@ body {
 
 .information {
     margin: 80px auto;
-    font-size: 20px;
+    font-size: 25px;
     display: flex;
     align-items: center;
     width: 100%;
-    
+    font-weight: 400;
 }
 
 

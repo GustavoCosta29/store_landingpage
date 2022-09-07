@@ -28,9 +28,9 @@ function listProducts(products) {
             <img src="${product.image}">
             <h3  class="name">${product.name}</h3>
             <p class="description">${product.description}</p>
-            <span class="old_price">De: R$${(product.oldPrice).toFixed(2)}</span>
-            <span class="price">Por: R$${(product.price).toFixed(2)}</span>
-            <span>ou ${product.installments.count}x de R$${(product.installments.value).toFixed(2)} </span>
+            <span class="old_price">De: R$${(product.oldPrice).toFixed(2).replace('.',',')}</span>
+            <span class="price">Por: R$${(product.price).toFixed(2).replace('.',',')}</span>
+            <span>ou ${product.installments.count}x de R$${(product.installments.value).toFixed(2).replace('.',',')} </span>
             <button type="menu">Comprar</button>
         
         </div>
