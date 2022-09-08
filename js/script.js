@@ -1,42 +1,68 @@
 let page = 0
 
-async function getProducts() {
+fetch('https://frontend-intern-challenge-api.iurykrieger.vercel.app/products?page=1')
+    .then(response => { response.json()
+    .then(listProducts)
     
-    const url = `https://frontend-intern-challenge-api.iurykrieger.vercel.app/products?page=${page}`
+    }).catch (error => {
+        console.log(error)
+})    
 
-    await fetch(url)
-        .then(response => { response.json()
-        .then(data => {
-        listProducts(data.products)    
-        }).catch (error => {
-            console.log(error)
-        })    
-    })
+
     
     
+
+
+
+
+function listProducts(objeto) {
+    let textHtml = document.querySelector('#section_two')
+    let produto = objeto.products.length
+    const btn = document.querySelector('#buttonMoreProducts')
     
-}
 
-getProducts()
-
-function listProducts(products) {
-    let textHtml = '' 
-
-    for(let product of products) {
-        textHtml += `
-        <div class="productBox" id="${product.id}">
-            <img src="${product.image}">
-            <h3  class="name">${product.name}</h3>
-            <p class="description">${product.description}</p>
-            <span class="old_price">De: R$${(product.oldPrice).toFixed(2).replace('.',',')}</span>
-            <span class="price">Por: R$${(product.price).toFixed(2).replace('.',',')}</span>
-            <span>ou ${product.installments.count}x de R$${(product.installments.value).toFixed(2).replace('.',',')} </span>
+    
+    
+    if( page === 3) {
+        btn.classList.add('hiddenButton')    
+    }else{
+        for(let c = 0; c < produto; c++) {
+            textHtml.innerHTML += ` 
+            <div class="productBox" id="${objeto.products.id}">
+            <img src="${objeto.products[c].image}">
+            <h3  class="name">${objeto.products[c].name}</h3>
+            <p class="description">${objeto.products[c].description}</p>
+            <span class="old_price">De: R$${(objeto.products[c].oldPrice).toFixed(2).replace('.',',')}</span>
+            <span class="price">Por: R$${(objeto.products[c].price).toFixed(2).replace('.',',')}</span>
+            <span>ou ${objeto.products[c].installments.count}x de R$${(objeto.products[c].installments.value).toFixed(2).replace('.',',')} </span>
             <button type="menu">Comprar</button>       
-        </div> 
-        `
-        
+            </div> 
+            `  
+              
+        }
+        page ++
+        console.log(page)
     }
+    
+    
+    
+    
 
-    document.querySelector('#section_two').innerHTML = textHtml
+    
 }
 
+
+
+
+async function seeMoreProducts() {
+
+
+
+
+await fetch(`https://frontend-intern-challenge-api.iurykrieger.vercel.app/products?page=${page}`)
+    .then((response) => response.json())
+    .then(listProducts)
+    
+}
+
+/* pagination e index */ 
