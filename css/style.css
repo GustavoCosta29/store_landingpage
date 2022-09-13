@@ -103,6 +103,14 @@ body {
     margin-bottom: 25px ;
 }
 
+.spanValidation {
+    color: green;
+}
+
+.spanValidationError {
+    color: red;
+}
+
 .button {
     padding: 8px;
     background-color: #ffffff;
@@ -126,7 +134,7 @@ body {
 .radio_check {
     display: flex;
     flex-direction: row;
-    width: 210px;
+    width: 300px;
     margin-bottom: 10px;
     font-size: 15px;   
 }

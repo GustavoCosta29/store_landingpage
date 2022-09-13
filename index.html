@@ -1,91 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Teste emprego</title>
-    <link rel="stylesheet" href="/css/style.css">
-    <script src="/js/script.js" ></script>
-    
-</head>
-<body>
+    <link rel="stylesheet" href="/css/style.css" />
+    <script src="/js/script.js"></script>
+  </head>
+  <body>
+    <!-- Header -->
     <header class="header">
-        <h2 class="title">uma seleção de produtos</h2>
-        <h1 class="title2">especial para você</h1>
-        <h5 class="subtitle">Todos os produtos desta lista foram selecionados a partir da sua navegação. Aproveite!</h5>
+      <h2 class="title">uma seleção de produtos</h2>
+      <h1 class="title2">especial para você</h1>
+      <h5 class="subtitle">
+        Todos os produtos desta lista foram selecionados a partir da sua
+        navegação. Aproveite!
+      </h5>
 
-        <ul class="nav">
-            <li class="navBar"> Conheça a Linx </li>
-            <li class="navBar"> Ajude o algorítimo </li>
-            <li class="navBar"> Seus produtos </li>
-            <li class="navBar"> Compartilhe </li>
-        </ul>
+      <ul class="nav">
+        <li class="navBar">Conheça a Linx</li>
+        <li class="navBar">Ajude o algorítimo</li>
+        <li class="navBar">Seus produtos</li>
+        <li class="navBar">Compartilhe</li>
+      </ul>
     </header>
-
+    <!-- Main content -->
     <container class="container">
-        <section class="section_one">
-            <div class="content">
-                <h2 class="section_one_title">Ajude o algorítimo a ser mais certeiro</h2>
-                <p class="section_one_p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ultricies tellus nec mi porta convallis sollicitudin eu urna. Mauris rhoncus erat sed interdum dignissim. Suspendisse semper pretium consectetur. Praesent bibendum arcu risus, sit amet iaculis ex tempus quis. Cras et erat ut tellus vulputate tincidunt. Aenean lacinia euismod augue vel egestas. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum vel urna tortor. Vivamus et arcu non felis tristique eleifend. 
-                <br><br><br>    
-                Morbi eu condimentum urna. Curabitur eu magna eget turpis condimentum ultrices. Suspendisse quis lorem ultricies, pulvinar purus sed, egestas erat. Etiam ultricies a ante vehicula pharetra. Quisque ut neque mattis, consequat velit ut, ultrices orci. Nulla varius elementum erat vel pharetra. Aenean sit amet nisi diam. Morbi viverra, magna ac luctus commodo, odio ante suscipit libero, at mattis augue est vel metus.</p>
-            </div>
-            <div class="form">
-                <form action="" class="content_form">
-                    <label class="label"> Seu nome: </label>
-                    <input class="input_content"  type="text" id="name">
-                    <label class="label" > E-mail: </label>
-                    <input class="input_content" type="email" id="email">
-                    <label class="label" > CPF: </label>
-                    <input class="input_content" type="text" id="cpf">
-
-                    <div class="radio_check">
-                        <input type="radio" name="sexo" value="op1" >Masculino
-                        <input type="radio" name="sexo" value="op2" >Feminino
-                    </div>
-
-                    <button class="button" type="submit">Enviar</button>
-                </form>
-            </div>
-        </section>
-        <h4 class="information">Sua seleção especial</h4>
-        <section id="section_two" class="section_Two" >
-
-            
-        </section>
-        <div class="more_Products"> 
-            <button onclick="seeMoreProducts()" id="buttonMoreProducts" class="buttonMoreProducts">Ainda mais produtos aqui!</button>
+      <!-- section with text and formClient -->
+      <section class="section_one">
+        <div class="content">
+          <h2 class="section_one_title">
+            Ajude o algorítimo a ser mais certeiro
+          </h2>
+          <p class="section_one_p">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Pellentesque ultricies tellus nec mi porta convallis sollicitudin eu
+            urna. Mauris rhoncus erat sed interdum dignissim. Suspendisse semper
+            pretium consectetur. Praesent bibendum arcu risus, sit amet iaculis
+            ex tempus quis. Cras et erat ut tellus vulputate tincidunt. Aenean
+            lacinia euismod augue vel egestas. Class aptent taciti sociosqu ad
+            litora torquent per conubia nostra, per inceptos himenaeos.
+            Vestibulum vel urna tortor. Vivamus et arcu non felis tristique
+            eleifend. <br /><br /><br />
+            Morbi eu condimentum urna. Curabitur eu magna eget turpis
+            condimentum ultrices. Suspendisse quis lorem ultricies, pulvinar
+            purus sed, egestas erat. Etiam ultricies a ante vehicula pharetra.
+            Quisque ut neque mattis, consequat velit ut, ultrices orci. Nulla
+            varius elementum erat vel pharetra. Aenean sit amet nisi diam. Morbi
+            viverra, magna ac luctus commodo, odio ante suscipit libero, at
+            mattis augue est vel metus.
+          </p>
         </div>
-        
-        
-        <h4 class="information" >Compartilhe a novidade</h4>
-        <section class="section_three">
-            <h4 class="section_three_title">Quer que seus amigos também ganhem a lista personalizada deles? Preencha agora!</h4>
+        <div class="form">
+          <form class="content_form" method="POST" id="frmCadastro" action="">
+            <label class="label">
+              Seu nome:
+              <span class="spanValidation" id="txtName"></span>
+            </label>
+            <input class="input_content" type="text" id="name" />
+            <label class="label">
+              E-mail:
+              <span class="spanValidation" id="txtEmail"></span>
+            </label>
+            <input class="input_content" type="email" id="email" />
+            <label class="label">
+              CPF:
+              <span class="spanValidation" id="txtCpf"></span>
+            </label>
+            <input class="input_content" type="text" id="cpf" />
 
-            <form class="section_three_form">
-                <div class="section_three_form_flex">
-                    <div class="section_three_form_div">
-                        <label>Nome do seu amigo:</label>
-                        <input type="text">
-                    </div>
-                    <div class="section_three_form_div">
-                        <label>E-mail:</label>
-                        <input type="text">
-                    </div>
-                </div>
-                <button type="submit" class="section_three_form_button">Enviar agora</button>
-            </form>
-            
-        </section>
+            <div class="radio_check">
+              <span class="spanValidation" id="txtGenero"></span>
+              <input type="radio" name="sexo" id="gender1" value="masculino" />
+              masculino
+              <input type="radio" name="sexo" id="gender2" value="feminino" />
+              feminino
+              <input type="radio" name="sexo" id="gender3" value="LGBTQIA+" />
+              LGBTQIA+
+            </div>
+
+            <button class="button" type="button" onclick="formValidateDados();">
+              Enviar
+            </button>
+          </form>
+        </div>
+      </section>
+      <!-- division -->
+      <h4 class="information">Sua seleção especial</h4>
+      <!-- section where we see the products -->
+      <section id="section_two" class="section_Two"></section>
+      <!-- more products to see -->
+      <div class="more_Products">
+        <button
+          onclick="seeMoreProducts()"
+          id="buttonMoreProducts"
+          class="buttonMoreProducts"
+        >
+          Ainda mais produtos aqui!
+        </button>
+      </div>
+      <!-- division -->
+      <h4 class="information">Compartilhe a novidade</h4>
+      <!-- form invite new friends -->
+      <section class="section_three">
+        <h4 class="section_three_title">
+          Quer que seus amigos também ganhem a lista personalizada deles?
+          Preencha agora!
+        </h4>
+
+        <form
+          class="section_three_form"
+          method="POST"
+          action=""
+          id="form_section_three"
+        >
+          <div class="section_three_form_flex">
+            <div class="section_three_form_div">
+              <label
+                >Nome do seu amigo:
+                <span class="spanValidation" id="txtNameFriend"></span>
+              </label>
+              <input type="text" id="nameFriend" />
+            </div>
+            <div class="section_three_form_div">
+              <label
+                >E-mail:
+                <span class="spanValidation" id="txtEmailFriend"></span>
+              </label>
+              <input type="text" id="emailFriend" />
+            </div>
+          </div>
+          <button
+            type="button"
+            class="section_three_form_button"
+            onclick="formValidateEmail()"
+          >
+            Enviar agora
+          </button>
+        </form>
+      </section>
     </container>
-
+    <!-- footer -->
     <footer class="footer">
-        <div class="footer_div">
-           <h5 class="footer_h5"> Testando suas habilidades em HTML, CSS e JS. Linx Impulse <br>2019 </h5>
-        </div>
+      <div class="footer_div">
+        <h5 class="footer_h5">
+          Testando suas habilidades em HTML, CSS e JS. Linx Impulse <br />2019
+        </h5>
+      </div>
     </footer>
-
-    
-</body>
+  </body>
 </html>
