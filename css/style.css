@@ -1,0 +1,398 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'arial' ;
+    max-height: min-content;    
+}
+
+/* Here start the header */
+.header{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 500px;
+    align-items: center;
+    background-color: #707070;
+    background-image: -webkit-linear-gradient(83.8deg, #fff 29.5%, #707070 30%);
+    opacity: 1; 
+    letter-spacing: 0px;
+}
+
+.title {
+    color: #ffffff;
+    margin-top: 50px;
+    font-size: 24px;
+    font-weight: 400;   
+}
+
+.subtitle {
+    color: #ffffff;
+    font-size: 52px;
+    font-weight: 700;
+}
+
+.descriptionHeader {
+    color: #ffffff;
+    font-size: 20px;
+    margin-top: 40px;
+    font-weight: 400;
+}
+
+.nav {
+    display: flex;
+    margin-top: 60px ;
+    opacity: 1;
+    gap: 30px;
+    flex-wrap: wrap;   
+}
+
+.navBar {
+    background-color: #ffffff;
+    list-style: none;
+    border-radius: 4px;
+    padding: 10px 35px;
+    color: #888888;
+    box-shadow: 0px 1px 6px #00000029 ;
+    width: 200px;
+    text-align: center;
+}
+
+/* Here start the container and section one */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width:  70vw;
+    margin: 40px auto; 
+    color: #888888;  
+    align-items: center;
+}
+
+.sectionOne {  
+
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    gap: 80px;
+    
+}
+
+.sectionOneTitle {
+    text-align: left;
+    letter-spacing: 0px;
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.sectionOneParagraph {
+    font-size: 16px;
+    text-align: left;
+    width: 550px;
+    
+}
+
+.form {
+    margin: 0 auto;
+       
+}
+
+.contentForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.contentForm input {
+    width: 350px;
+    padding: 5px;
+    margin-bottom: 25px ;
+}
+
+.spanValidation {
+    color: green;
+}
+
+.spanValidationError {
+    color: red;
+}
+
+.label {
+    font-size: 15px;
+    margin-bottom: 7px;
+}
+
+.button {
+    padding: 8px;
+    background-color: #ffffff;
+    border: 1px solid #707070;
+    border-radius: 4px;
+    color: #888888;
+    font-size: 16px;
+}
+
+
+.button:hover {
+    background-color: #afffa8;
+    transition-duration: 1s;
+    color: black;
+}
+
+.radioCheck {
+    display: flex;
+    flex-direction: row;
+    width: 300px;
+    margin-bottom: 10px;
+    font-size: 15px;   
+}
+
+/* Here start the section two */
+
+.informationSectionOne {
+    width: 100%;
+    justify-content: center;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    margin: 70px 0; 
+    
+
+}
+
+
+.informationSectionOne hr {
+    width: 30%;
+    border: 0.5px solid #888888;
+    
+
+}
+.informationSectionOne h4 {
+    margin: 0 50px;
+    text-align: center;
+    
+
+}
+
+
+
+.sectionTwo {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;    
+    gap: 35px;
+    justify-content: center;
+}
+
+.productBox {
+    display: flex;
+    flex-direction: column;
+    width: 22%;
+    padding: 8px;
+    gap: 7px 0;         
+}
+
+.ProductImg {
+    align-self: center;  
+}
+
+.productInformation {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.name {
+   font-size: 16px;
+   font-weight: 400;
+   padding: 10px 0;
+   color: black;     
+}
+
+.description {
+    font-size: 14px;
+    margin: 0 ;
+    color: black;
+}
+
+.oldPrice {
+    font-size: 14px;
+    text-decoration: line-through;    
+}
+
+.price {
+    font-size: 17px;
+    font-weight: 700;
+    color: black;
+    
+}
+
+.productBox span {
+    color: black;    
+}
+
+.productBox button {
+    background-color: #ffffff;
+    border: 1px solid #707070;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #707070;
+}
+
+.productBox button:hover {  
+    background-color: #afffa8;
+    transition-duration: 1s;
+    color: black;
+}
+
+.moreProducts {
+    margin: 60px auto;
+    
+}
+
+.buttonMoreProducts {
+    background-color: #ffffff;
+    border: 1px solid #707070;
+    padding: 15px 80px;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #707070; 
+    
+}
+
+.buttonMoreProducts:hover {
+    background-color: #afffa8;
+    transition-duration: 1s;  
+    color: black;
+}
+
+.hiddenButton {
+    display: none;
+}
+
+.informationSectionTwo {
+    width: 90%;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    margin: 70px 0; 
+}
+
+
+.informationSectionTwo hr {
+    width: 30%;
+    border: 0.5px solid #888888;    
+
+}
+
+.informationSectionTwo h4 {
+    margin: 0 50px;  
+    text-align: center;  
+}
+
+ /* Here start the section three*/
+
+.sectionThree {
+    display: flex;
+    flex-direction: column;    
+    gap: 40px;
+    justify-content: center; 
+    align-items: center;
+    width: 100%;       
+}
+
+.sectionThreeTitle {
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.sectionThreeForm {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin:0 auto;
+    width: 100%;
+    justify-content: center;
+    
+}
+
+.sectionThreeFormFlex {  
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 70px;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.sectionThreeFormData {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 35%;
+    font-size: 14px;
+    opacity: 1;
+    
+}
+
+
+
+.sectionThreeForm div input {
+    width: 100%; 
+    height: 30px;
+    opacity: 1; 
+    border: 1px solid #707070;  
+}
+
+.sectionThreeFormButton{
+    margin: 0 auto;
+    padding: 10px 90px; 
+    background-color: #ffffff;
+    border: 1px solid #707070;
+    border-radius: 4px;
+    opacity: 1;
+    color: #888888;
+    font-size: 16px;
+        
+}
+
+.sectionThreeFormButton:hover {
+    background-color: #afffa8;
+    transition-duration: 1s;
+    color: black;     
+}
+
+/* here start the footer */
+
+.footer {
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    height: 310px;
+    align-items: center;
+    background-color: #707070;
+    background-image: -webkit-linear-gradient(273.8deg, #fff 29.8%, #707070 30%);
+    opacity: 1; 
+    letter-spacing: 0px;
+    color: #ffffff;   
+}
+
+.footerDiv{
+    position: absolute;
+    width: 300px;
+    font-size: 16px;
+    flex-wrap: wrap;
+    margin-bottom: -85px;
+}
+
+.footerDescription {
+    font-weight: 400;
+}
+
