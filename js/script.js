@@ -1,5 +1,5 @@
 // form validation
-function formValidateDados() {
+function formValidateData() {
     // value of the form element
     let name = document.getElementById('name').value; 
     let email = document.getElementById('email').value;
@@ -78,29 +78,34 @@ fetch('https://frontend-intern-challenge-api.iurykrieger.vercel.app/products?pag
 
 // listing products coming from API
 function listProducts(objeto) {
-    let textHtml = document.querySelector('#section_two')
+    let textHtml = document.querySelector('#sectionTwo')
     let produto = objeto.products.length
     const btn = document.querySelector('#buttonMoreProducts')
 
-    if( page === 3) {
-        btn.classList.add('hiddenButton')    
+    for(let c = 0; c < produto; c++) {
+        textHtml.innerHTML += ` 
+        <div class="productBox" id="${objeto.products.id}">
+            <div class="ProductImg" >
+                <img src="${objeto.products[c].image}">
+            </div>
+            <div class="productInformation" >
+                <h3  class="name">${objeto.products[c].name}</h3>
+                <p class="description">${objeto.products[c].description}</p>
+                <span class="oldPrice">De: R$${(objeto.products[c].oldPrice).toFixed(2).replace('.',',')}</span>
+                <span class="price">Por: R$${(objeto.products[c].price).toFixed(2).replace('.',',')}</span>
+                <span>ou ${objeto.products[c].installments.count}x de R$${(objeto.products[c].installments.value).toFixed(2).replace('.',',')} </span>
+                <button type="menu">Comprar</button>       
+            </div>
+        </div> 
+        `                    
+    }
+
+    if( page != 2 ) {
+     page++      
+        
     }else{
-        for(let c = 0; c < produto; c++) {
-            textHtml.innerHTML += ` 
-            <div class="productBox" id="${objeto.products.id}">
-            <img src="${objeto.products[c].image}">
-            <h3  class="name">${objeto.products[c].name}</h3>
-            <p class="description">${objeto.products[c].description}</p>
-            <span class="old_price">De: R$${(objeto.products[c].oldPrice).toFixed(2).replace('.',',')}</span>
-            <span class="price">Por: R$${(objeto.products[c].price).toFixed(2).replace('.',',')}</span>
-            <span>ou ${objeto.products[c].installments.count}x de R$${(objeto.products[c].installments.value).toFixed(2).replace('.',',')} </span>
-            <button type="menu">Comprar</button>       
-            </div> 
-            `                
-        }
-        page ++
-        console.log(page)
-    }  
+        btn.classList.add('hiddenButton')    
+    }   
 }
 
 // fetch of API method GET next page
@@ -146,7 +151,7 @@ function formValidateEmail() {
     // control variable validation and form submission
     if (validationFormEmail === 2) { 
         alert('form accepted!')
-        // form_section_three.submit()
+        // formSectionThree.submit()
 
     }else {
         console.log('error')

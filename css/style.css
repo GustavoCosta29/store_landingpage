@@ -12,6 +12,7 @@ body {
 /* Here start the header */
 .header{
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     height: 500px;
     align-items: center;
@@ -28,13 +29,13 @@ body {
     font-weight: 400;   
 }
 
-.title2 {
+.subtitle {
     color: #ffffff;
     font-size: 52px;
     font-weight: 700;
 }
 
-.subtitle {
+.descriptionHeader {
     color: #ffffff;
     font-size: 20px;
     margin-top: 40px;
@@ -45,7 +46,8 @@ body {
     display: flex;
     margin-top: 60px ;
     opacity: 1;
-    gap: 30px;   
+    gap: 30px;
+    flex-wrap: wrap;   
 }
 
 .navBar {
@@ -55,25 +57,27 @@ body {
     padding: 10px 35px;
     color: #888888;
     box-shadow: 0px 1px 6px #00000029 ;
+    width: 200px;
+    text-align: center;
 }
 
-/* Here start the section one */
+/* Here start the container and section one */
 
 .container {
     display: flex;
     flex-direction: column;
-    width:  1100px;
+    width:  60vw;
     margin: 40px auto; 
     color: #888888;  
 }
 
-.section_one {
+.sectionOne {
     display: flex;
     flex-direction: row;
     
 }
 
-.section_one_title {
+.sectionOneTitle {
     text-align: left;
     letter-spacing: 0px;
     font-size: 24px;
@@ -81,10 +85,11 @@ body {
     margin-bottom: 30px;
 }
 
-.section_one_p {
+.sectionOneParagraph {
     font-size: 16px;
     text-align: left;
     width: 550px;
+    
 }
 
 .form {
@@ -92,12 +97,12 @@ body {
        
 }
 
-.content_form {
+.contentForm {
     display: flex;
     flex-direction: column;
 }
 
-.content_form input {
+.contentForm input {
     width: 350px;
     padding: 5px;
     margin-bottom: 25px ;
@@ -111,6 +116,11 @@ body {
     color: red;
 }
 
+.label {
+    font-size: 15px;
+    margin-bottom: 7px;
+}
+
 .button {
     padding: 8px;
     background-color: #ffffff;
@@ -120,10 +130,6 @@ body {
     font-size: 16px;
 }
 
-.label {
-    font-size: 15px;
-    margin-bottom: 7px;
-}
 
 .button:hover {
     background-color: #afffa8;
@@ -131,7 +137,7 @@ body {
     color: black;
 }
 
-.radio_check {
+.radioCheck {
     display: flex;
     flex-direction: row;
     width: 300px;
@@ -141,17 +147,16 @@ body {
 
 /* Here start the section two */
 
-.information {
-    margin: 60px auto;
+.informationSectionOne {
+    margin: 80px 0 80px 0;
     font-size: 25px;
     display: flex;
     align-items: center;
-    width: 100%;
     font-weight: 400;
 }
 
 
-.information::before {
+.informationSectionOne::before {
     content: '';  
     display: inline-block;
     height: 1px;
@@ -161,7 +166,7 @@ body {
 
 }
 
-.information::after {
+.informationSectionOne::after {
     content: '';  
     display: inline-block;
     height: 1px;
@@ -170,7 +175,7 @@ body {
     margin-left: 25px;
 }
 
-.section_Two {
+.sectionTwo {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;    
@@ -186,6 +191,16 @@ body {
     gap: 7px 0;         
 }
 
+.ProductImg {
+    align-self: center;  
+}
+
+.productInformation {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
 .name {
    font-size: 16px;
    font-weight: 400;
@@ -199,7 +214,7 @@ body {
     color: black;
 }
 
-.old_price {
+.oldPrice {
     font-size: 14px;
     text-decoration: line-through;    
 }
@@ -230,7 +245,7 @@ body {
     color: black;
 }
 
-.more_Products {
+.moreProducts {
     margin: 60px auto;
     
 }
@@ -254,9 +269,38 @@ body {
 .hiddenButton {
     display: none;
 }
+
+.informationSectionTwo {
+    margin: 60px 0 60px 0;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+}
+
+
+.informationSectionTwo::before {
+    content: '';  
+    display: inline-block;
+    height: 1px;
+    width: 380px;
+    background-color: #808080;
+    margin-right: 25px;
+
+}
+
+.informationSectionTwo::after {
+    content: '';  
+    display: inline-block;
+    height: 1px;
+    width: 380px;
+    background-color: #888888;
+    margin-left: 25px;
+}
+
  /* Here start the section three*/
 
-.section_three {
+.sectionThree {
     display: flex;
     flex-direction: column;    
     gap: 40px;
@@ -265,22 +309,23 @@ body {
     width: 100%;       
 }
 
-.section_three_title {
+.sectionThreeTitle {
     font-weight: 400;
     font-size: 16px;
 }
 
-.section_three_form {
+.sectionThreeForm {
     display: flex;
     flex-direction: row;
     gap: 40px;
     flex-wrap: wrap;
     margin:0 auto;
     width: 100%;
+    justify-content: center;
     
 }
 
-.section_three_form_flex {  
+.sectionThreeFormFlex {  
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -290,7 +335,7 @@ body {
     
 }
 
-.section_three_form_div {
+.sectionThreeFormData {
     display: flex;
     flex-direction: column;
     gap: 4px;
@@ -302,14 +347,14 @@ body {
 
 
 
-.section_three_form div input {
+.sectionThreeForm div input {
     width: 100%; 
     height: 30px;
     opacity: 1; 
     border: 1px solid #707070;  
 }
 
-.section_three_form_button{
+.sectionThreeFormButton{
     margin: 0 auto;
     padding: 10px 90px; 
     background-color: #ffffff;
@@ -321,7 +366,7 @@ body {
         
 }
 
-.section_three_form_button:hover {
+.sectionThreeFormButton:hover {
     background-color: #afffa8;
     transition-duration: 1s;
     color: black;     
@@ -342,7 +387,7 @@ body {
     color: #ffffff;   
 }
 
-.footer_div{
+.footerDiv{
     position: absolute;
     width: 300px;
     font-size: 16px;
@@ -352,12 +397,124 @@ body {
 
     
 
-.footer_h5 {
+.footerDescription {
     font-weight: 400;
 }
 
+@media (max-width:500px) {
+
+    .header{
+    display: flex;
+    padding: 20px 20px 0 20px;
+    background-image: -webkit-linear-gradient(72.3deg, #fff 29.8%, #707070 30%);
+    height: 480px;
+    text-align: -webkit-center;
+    }
+
+    .title {
+        font-size: 20px;
+        
+    }
+
+    .descriptionHeader {  
+        font-size: 17px;
+        margin-top: 15px;
+
+    }
+
+    .subtitle {
+        font-size: 42px;
+    }
+
+    .nav {
+        justify-content: center;
+    }
+
+    .navBar {
+        width: 200px;
+    }
+
+    .container {
+        width: 100%; ;
+    }
+
+    .sectionOne {
+        display: flex;
+        flex-direction: column;
+        padding: 0 20px 20px 20px;
+    
+    }
+
+    .sectionOneParagraph {
+        width: 100%;
+        margin-bottom: 80px;
+        font-size: 15px;
+        
+    }
+
+    .informationSectionOne::before {
+        width: 90px;
+    }
+
+    .informationSectionOne::after {
+        width: 90px;
+    }
+
+    .form {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        
+    }
+
+    .contentForm input {
+        width: 445px;
+
+    }
+
+    .sectionTwo {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 35px;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .productBox {
+        width: 70%;
+        display: flex;
+        flex-direction: row;
+        gap: 25px;
+    }
+
+    .informationSectionTwo::before {
+        width: 80px;
+    }
+
+    .informationSectionTwo::after {
+        width: 80px;
+    }
+
+    .sectionThreeTitle {
+        text-align: center;
+    }
+
+    .sectionThreeFormFlex {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .sectionThreeFormData {
+        width: 90%;
+    }
+
+    .footer {
+        height: 240px;
+        background-image: -webkit-linear-gradient(278.8deg, #fff 29%, #707070 30%);
+    }
 
 
 
-
-
+}
