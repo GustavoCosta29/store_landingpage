@@ -66,14 +66,18 @@ body {
 .container {
     display: flex;
     flex-direction: column;
-    width:  60vw;
+    width:  70vw;
     margin: 40px auto; 
     color: #888888;  
+    align-items: center;
 }
 
-.sectionOne {
+.sectionOne {  
+
     display: flex;
     flex-direction: row;
+    align-self: center;
+    gap: 80px;
     
 }
 
@@ -148,32 +152,32 @@ body {
 /* Here start the section two */
 
 .informationSectionOne {
-    margin: 80px 0 80px 0;
+    width: 100%;
+    justify-content: center;
     font-size: 25px;
     display: flex;
     align-items: center;
     font-weight: 400;
-}
-
-
-.informationSectionOne::before {
-    content: '';  
-    display: inline-block;
-    height: 1px;
-    width: 380px;
-    background-color: #808080;
-    margin-right: 25px;
+    margin: 70px 0; 
+    
 
 }
 
-.informationSectionOne::after {
-    content: '';  
-    display: inline-block;
-    height: 1px;
-    width: 380px;
-    background-color: #888888;
-    margin-left: 25px;
+
+.informationSectionOne hr {
+    width: 30%;
+    border: 0.5px solid #888888;
+    
+
 }
+.informationSectionOne h4 {
+    margin: 0 50px;
+    text-align: center;
+    
+
+}
+
+
 
 .sectionTwo {
     display: flex;
@@ -186,7 +190,7 @@ body {
 .productBox {
     display: flex;
     flex-direction: column;
-    width: 20%;
+    width: 22%;
     padding: 8px;
     gap: 7px 0;         
 }
@@ -271,31 +275,24 @@ body {
 }
 
 .informationSectionTwo {
-    margin: 60px 0 60px 0;
-    font-size: 24px;
+    width: 90%;
+    font-size: 25px;
     display: flex;
     align-items: center;
     font-weight: 400;
+    margin: 70px 0; 
 }
 
 
-.informationSectionTwo::before {
-    content: '';  
-    display: inline-block;
-    height: 1px;
-    width: 380px;
-    background-color: #808080;
-    margin-right: 25px;
+.informationSectionTwo hr {
+    width: 30%;
+    border: 0.5px solid #888888;    
 
 }
 
-.informationSectionTwo::after {
-    content: '';  
-    display: inline-block;
-    height: 1px;
-    width: 380px;
-    background-color: #888888;
-    margin-left: 25px;
+.informationSectionTwo h4 {
+    margin: 0 50px;  
+    text-align: center;  
 }
 
  /* Here start the section three*/
@@ -395,126 +392,7 @@ body {
     margin-bottom: -85px;
 }
 
-    
-
 .footerDescription {
     font-weight: 400;
 }
 
-@media (max-width:500px) {
-
-    .header{
-    display: flex;
-    padding: 20px 20px 0 20px;
-    background-image: -webkit-linear-gradient(72.3deg, #fff 29.8%, #707070 30%);
-    height: 480px;
-    text-align: -webkit-center;
-    }
-
-    .title {
-        font-size: 20px;
-        
-    }
-
-    .descriptionHeader {  
-        font-size: 17px;
-        margin-top: 15px;
-
-    }
-
-    .subtitle {
-        font-size: 42px;
-    }
-
-    .nav {
-        justify-content: center;
-    }
-
-    .navBar {
-        width: 200px;
-    }
-
-    .container {
-        width: 100%; ;
-    }
-
-    .sectionOne {
-        display: flex;
-        flex-direction: column;
-        padding: 0 20px 20px 20px;
-    
-    }
-
-    .sectionOneParagraph {
-        width: 100%;
-        margin-bottom: 80px;
-        font-size: 15px;
-        
-    }
-
-    .informationSectionOne::before {
-        width: 90px;
-    }
-
-    .informationSectionOne::after {
-        width: 90px;
-    }
-
-    .form {
-        display: flex;
-        justify-content: center;
-        margin: 0;
-        
-    }
-
-    .contentForm input {
-        width: 445px;
-
-    }
-
-    .sectionTwo {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        gap: 35px;
-        justify-content: center;
-        align-content: center;
-    }
-
-    .productBox {
-        width: 70%;
-        display: flex;
-        flex-direction: row;
-        gap: 25px;
-    }
-
-    .informationSectionTwo::before {
-        width: 80px;
-    }
-
-    .informationSectionTwo::after {
-        width: 80px;
-    }
-
-    .sectionThreeTitle {
-        text-align: center;
-    }
-
-    .sectionThreeFormFlex {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .sectionThreeFormData {
-        width: 90%;
-    }
-
-    .footer {
-        height: 240px;
-        background-image: -webkit-linear-gradient(278.8deg, #fff 29%, #707070 30%);
-    }
-
-
-
-}
