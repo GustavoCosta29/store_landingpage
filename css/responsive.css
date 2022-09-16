@@ -1,3 +1,137 @@
+@media (min-width:0) and    (max-width:499px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin: 40px auto;
+        color: #888888;
+        align-items: center;
+    }
+    
+    .sectionOne {
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        gap: 80px;
+    }
+
+    .title {
+        color: #ffffff;
+        margin-top: 30px;
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    .subtitle {
+        color: #ffffff;
+        font-size: 32px;
+        font-weight: 700;
+    }
+
+    .descriptionHeader {
+        color: #ffffff;
+        font-size: 16px;
+        margin-top: 20px;
+        font-weight: 400;
+        text-align: center;
+    }
+
+    .nav {
+        display: flex;
+        margin-top: 60px;
+        opacity: 1;
+        gap: 30px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .sectionOne {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        gap: 80px;
+    }
+
+    .sectionOneParagraph {
+        font-size: 16px;
+        text-align: left;
+        word-wrap: break-word;
+        width: auto;
+    }
+
+    .contentForm input {
+        width: auto;
+    }
+
+    .radioCheck {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 10px;
+        font-size: 15px;
+        gap: 10px;
+    }
+
+    .sectionTwo {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 35px;
+        justify-content: center;
+        
+    }
+
+    .productBox {
+        display: flex;
+        flex-direction: row;
+        padding: 8px;
+        gap: 7px 20px;
+        width: auto;
+        
+    }
+
+    .buttonMoreProducts {
+        padding: 15px 30px;    
+    }
+
+
+    .sectionThreeTitle {
+        text-align: center;
+        font-weight: 400;
+        font-size: 16px;
+    }
+
+    .sectionThreeForm {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .sectionThreeFormFlex {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 70px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sectionThreeFormData {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        width: 95%;
+        font-size: 14px;
+        opacity: 1;
+    }
+
+}
+
+
 @media (min-width:500px) and (max-width:1080px) {
 
     .header{
@@ -43,9 +177,9 @@
     }
 
     .sectionOneParagraph {
-        width: 100%;
         margin-bottom: 80px;
         font-size: 15px;
+        width: 100%;
         
     }
 
