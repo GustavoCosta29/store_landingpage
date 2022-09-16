@@ -65,7 +65,7 @@ function formValidateData() {
 }   
 
 //variable of control
-let page = 0
+let page = 1
 
 // fetch of API method GET
 fetch('https://frontend-intern-challenge-api.iurykrieger.vercel.app/products?page=1')
@@ -100,7 +100,7 @@ function listProducts(objeto) {
         `                    
     }
 
-    if( page != 2 ) {
+    if( page != 3 ) {
      page++      
         
     }else{
